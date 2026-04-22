@@ -1,28 +1,26 @@
-import { useContext } from "react";
-import { AnimeContext } from "../Context/context";
-import anime from "../data";
+import { useParams } from "react-router";
 import Card from "./Card";
+import anime from "../data";
 
 export default function DetailPage() {
-  const { findAnime } = useContext(AnimeContext);
+  const { id } = useParams();
+  const data = anime.find((item) => item.id === Number(id));
 
-  const data = anime.find((item) => item.name === findAnime);
+  if (!data) {
+    return <h2>Anime not found</h2>;
+  }
 
   return (
-    <>
     <div className="flex flex-col justify-center items-center">
-      {
-          <Card
-          image={data.image}
-          name={data.name}
-          episodes={data.episodes}
-          ratings={data.rating}
-          releasedate={data.releaseYear}
-          description={data.description}
-          genre={data.genre}
-          />
-        }
-        </div>
-    </>
+      <Card
+        image={data.image}
+        name={data.name}
+        episodes={data.episodes}
+        ratings={data.rating}
+        releasedate={data.releaseYear}
+        description={data.description}
+        genre={data.genre}
+      />
+    </div>
   );
 }

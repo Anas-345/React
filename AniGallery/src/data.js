@@ -4,6 +4,7 @@ import JujustuKaisen from "./assets/JujustuKaisen.jpg";
 
 export const anime = [
   {
+    id: 1,
     name: "Jujutsu Kaisen",
     image: JujustuKaisen,
     episodes: 47,
@@ -11,9 +12,10 @@ export const anime = [
     releaseYear: 2020,
     rating: 8.7,
     description:
-      "Yuji Itadori joins a secret organization of sorcerers to eliminate powerful curses and uncover the mystery behind Sukuna, the King of curses."
+      "Yuji Itadori joins a secret organization of sorcerers to eliminate powerful curses and uncover the mystery behind Sukuna, the King of curses.",
   },
   {
+    id: 2,
     name: "Dragon Ball Super",
     image: DragonBallSuper,
     episodes: 131,
@@ -21,9 +23,10 @@ export const anime = [
     releaseYear: 2015,
     rating: 8.3,
     description:
-      "Goku and his friends face new powerful gods and warriors across multiple universes while pushing their limits beyond Super Saiyan."
+      "Goku and his friends face new powerful gods and warriors across multiple universes while pushing their limits beyond Super Saiyan.",
   },
   {
+    id: 3,
     name: "Classroom of the Elite",
     image: ClassroomOfTheElite,
     episodes: 25,
@@ -31,7 +34,7 @@ export const anime = [
     releaseYear: 2017,
     rating: 8.0,
     description:
-      "Ayanokoji, a quiet but brilliant student, hides his intelligence while navigating a cutthroat school system where only the elite survive."
+      "Ayanokoji, a quiet but brilliant student, hides his intelligence while navigating a cutthroat school system where only the elite survive.",
   },
 ];
 

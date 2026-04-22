@@ -6,6 +6,7 @@ export default function Home() {
     <div className="bg-stone-900 flex mx-6 my-16">
       {anime.map((data) => (
         <Card
+        id={data.id}
           image={data.image}
           key={data.name}
           name={data.name}

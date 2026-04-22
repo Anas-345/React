@@ -1,10 +1,8 @@
 import { useNavigate } from "react-router";
 import Image from "./Image.jsx";
-import { useContext } from "react";
-import { AnimeContext } from "../Context/context";
 import Info from "./Info.jsx";
 
-export default function Card({
+export default function Card({id,
   name,
   image,
   episodes,
@@ -14,11 +12,9 @@ export default function Card({
   description,
 }) {
   const navigate = useNavigate();
-  const { setAnime } = useContext(AnimeContext);
 
   function handleClick() {
-    setAnime(name)
-    navigate(`/detail`);
+    navigate(`/detail/${id}`);
   }
 
   return (
